@@ -2,34 +2,45 @@
 
 int TwoCrystalBalls(bool array[], int length)
 {
-    int CurrentHeight = floor(sqrt(length));
+    int heightIncrement = floor(sqrt(length));
+    int currentHeight = heightIncrement;
     int balls = 2;
-    int MaxLength = length;
-    int MinLength = 0;
+    int maxLength = length;
+    int minLength = 0;
 
-    while (balls != 0)
+    while (balls != 0 && minLength < maxLength)
     {
-        if (array[CurrentHeight] == true && balls == 2)
+        if (array[currentHeight] == true && balls == 2)
         {
-            MaxLength = CurrentHeight;
+            maxLength = currentHeight;
             balls --;
         }
-        else if(array[CurrentHeight] == false)
+        else if(array[currentHeight] == false)
         {
-            MinLength = CurrentHeight;
-            CurrentHeight *= 2;
+            minLength = currentHeight;
+            currentHeight += heightIncrement;
         }
         if(balls == 1)
         {
-            while (array[MinLength] != true)
+            while (array[minLength] != true && minLength < maxLength)
             {
-                if(array[MinLength] == false)
+                if(array[minLength] == false)
                 {
-                    MinLength++;
+                    minLength++;
                 }
             }
-            balls--;
+            if(array[minLength] == true && minLength < maxLength)
+            {
+                balls --;
+            }
         }
     }
-    
+    if(balls == 0)
+    {
+        return (minLength);
+    }
+    else
+    {
+        return (-1);
+    } 
 }

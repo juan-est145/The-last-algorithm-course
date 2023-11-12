@@ -1,7 +1,7 @@
 #include "header.h"
 int main(void)
 {
-   int array[6] = {1, 2, 3, 4 , 5, 6};
-   int result = ReturnIndexBinary(array, 5, 8);
+   bool array[6] = {true, true, true, true , true, true};
+   int result = TwoCrystalBalls(array, 6);
    return (0);
 }
