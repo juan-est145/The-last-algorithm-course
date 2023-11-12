@@ -7,4 +7,6 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <math.h>
+#include <stdbool.h>
 int ReturnIndexBinary(int array[],int arrayLength, int value);
+int TwoCrystalBalls(bool array[], int length);
