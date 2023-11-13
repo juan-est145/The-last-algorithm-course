@@ -1,7 +1,7 @@
 #include "header.h"
 int main(void)
 {
-   bool array[6] = {true, true, true, true , true, true};
-   int result = TwoCrystalBalls(array, 6);
+   int matriz[12] = {12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+   BubbleSorting(matriz, 12);
    return (0);
 }
