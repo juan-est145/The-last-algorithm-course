@@ -7,7 +7,13 @@ int main(void)
    ptr = (t_linkedList *)malloc(sizeof(t_linkedList));
    ptr->next = CreateLinkedList();
    PrintLinkedList(ptr->next);
-   free(ptr);
+   while (ptr != NULL)
+   {
+      t_linkedList *tmp = ptr;
+      ptr = ptr->next;
+      free(tmp);
+   }
+   
    return (0);
 }
 
