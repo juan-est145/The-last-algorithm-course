@@ -1,4 +1,30 @@
 #include "header.h"
+void AddLastNode(t_linkedList **linkedList, int value)
+{
+   t_linkedList *lastNode = (t_linkedList *)malloc(sizeof(t_linkedList));
+
+   lastNode->data = value;
+   lastNode->next = NULL;
+
+   t_linkedList *ptr = *linkedList;
+
+   while (ptr->next != NULL)
+   {
+      ptr = ptr->next;
+   }
+   ptr->next = lastNode;
+   
+}
+void DeleteLinkedList(t_linkedList **linkedList)
+{
+   while (*linkedList != NULL)
+   {
+      t_linkedList *tmp = *linkedList;
+      *linkedList = (*linkedList)->next;
+      free(tmp);
+   }
+}
+
 
 t_linkedList* CreateLinkedList()
 {
@@ -23,4 +49,14 @@ t_linkedList* CreateLinkedList()
    fourthNode->next = NULL;
 
    return(firstNode);
+}
+
+void PrintLinkedList(t_linkedList *node)
+{
+   while (node != NULL)
+   {
+      printf("%d\n", node->data);
+      node = node->next;
+   }
+   
 }

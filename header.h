@@ -21,3 +21,5 @@ int TwoCrystalBalls(bool array[], int length);
 void	BubbleSorting(int *tab, int size);
 void PrintLinkedList(t_linkedList *node);
 t_linkedList* CreateLinkedList();
+void AddLastNode(t_linkedList **linkedList, int value);
+void DeleteLinkedList(t_linkedList **linkedList);
