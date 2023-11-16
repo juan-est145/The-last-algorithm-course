@@ -23,3 +23,5 @@ void PrintLinkedList(t_linkedList *node);
 t_linkedList* CreateLinkedList();
 void AddLastNode(t_linkedList **linkedList, int value);
 void DeleteLinkedList(t_linkedList **linkedList);
+void AddFirstNode(t_linkedList **linkedList, int value);
+void InsertAfterNode(t_linkedList **linkedList, int value);

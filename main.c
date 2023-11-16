@@ -6,10 +6,21 @@ int main(void)
    ptr = (t_linkedList *)malloc(sizeof(t_linkedList));
    ptr = CreateLinkedList();
    PrintLinkedList(ptr);
-   
-   AddLastNode(&ptr, 45689);
    printf("\n");
+   
+   AddFirstNode(&ptr, 2);
    PrintLinkedList(ptr);
+   printf("\n");
+
+   AddLastNode(&ptr, 45689);
+   PrintLinkedList(ptr);
+   printf("\n");
+   
+
+   InsertAfterNode(&ptr->next, 7812);
+   PrintLinkedList(ptr);
+   printf("\n");
+
    DeleteLinkedList(&ptr);
    return (0);
 }
