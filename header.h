@@ -28,3 +28,4 @@ void InsertAfterNode(t_linkedList **linkedList, int value);
 void Enqueue(int value, t_linkedList **head, t_linkedList **tail);
 int Dequeue(t_linkedList **head, t_linkedList **tail);
 void Push(t_linkedList **tail, int value);
+int Pop(t_linkedList **tail);
