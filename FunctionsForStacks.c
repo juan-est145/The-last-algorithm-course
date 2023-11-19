@@ -1,14 +1,4 @@
 #include "header.h"
-int main(void)
-{
-   t_linkedList *stack = NULL;
-   Push(&stack, 10);
-   Push(&stack, 20);
-
-   PrintLinkedList(stack);
-   return (0);
-}
-
 void Push(t_linkedList **tail, int value)
 {
    if(*tail == NULL)
