@@ -16,7 +16,7 @@ typedef struct s_struct
     struct s_struct *next;
 }t_linkedList;
 
-typedef struct {
+typedef struct s_structList{
     int *array;
     size_t size;
     size_t capacity;

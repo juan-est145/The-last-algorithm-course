@@ -31,7 +31,7 @@ void Resize(t_arrayList *list)
 void Append(t_arrayList* list, int value) 
 {
     if (list->size >= list->capacity) {
-        resize(list);
+        Resize(list);
     }
     list->array[list->size++] = value;
 }
