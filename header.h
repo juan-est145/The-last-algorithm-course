@@ -16,6 +16,12 @@ typedef struct s_struct
     struct s_struct *next;
 }t_linkedList;
 
+typedef struct {
+    int *array;
+    size_t size;
+    size_t capacity;
+} t_arrayList;
+
 int ReturnIndexBinary(int array[],int arrayLength, int value);
 int TwoCrystalBalls(bool array[], int length);
 void	BubbleSorting(int *tab, int size);
@@ -29,3 +35,7 @@ void Enqueue(int value, t_linkedList **head, t_linkedList **tail);
 int Dequeue(t_linkedList **head, t_linkedList **tail);
 void Push(t_linkedList **tail, int value);
 int Pop(t_linkedList **tail);
+t_arrayList* CreateArrayList(int initialCapacity);
+void Resize(t_arrayList *list);
+void Append(t_arrayList* list, int value);
+void FreeArrayList(t_arrayList* list);
