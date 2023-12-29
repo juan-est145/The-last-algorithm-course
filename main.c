@@ -1,12 +1,24 @@
 #include "header.h"
 int main(void)
 {
-   int arr[] = { 10, 7, 8, 9, 1, 5 };
-   QuickSort(arr, 0, (sizeof(arr) / sizeof(arr[0])) - 1);
-   for (unsigned i = 0; i < (sizeof(arr) / sizeof(arr[0])); i++)
-   {
-      printf("%d\n", arr[i]);
-   }
+   t_binary_tree *root;
+
+   root = Add_Tree_Node(7);
+   Insert_Left_Node(&root, 23);
+   Insert_Right_Node(&root, 3);
    
+   Insert_Left_Node(&root->left, 5);
+   Insert_Right_Node(&root->left, 4);
+
+   Insert_Left_Node(&root->right, 18);
+   Insert_Right_Node(&root->right, 21);
+
+   printf("Here comes the values pre-ordered\n");
+   Print_tree_Pre_ordered(root);
+   printf("Here comes the values in-ordered\n");
+   Print_tree_In_ordered(root);
+   printf("Here comes the values post-ordered\n");
+   Print_tree_Post_ordered(root);
+   Free_Tree(root);
    return (0);
 }

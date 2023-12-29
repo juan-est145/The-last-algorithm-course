@@ -46,4 +46,11 @@ void Resize(t_arrayList *list);
 void Append(t_arrayList* list, int value);
 void FreeArrayList(t_arrayList* list);
 void QuickSort(int array[], int low, int high);
+t_binary_tree* Add_Tree_Node(int value);
+t_binary_tree *Insert_Right_Node(t_binary_tree **root, int value);
+t_binary_tree *Insert_Left_Node(t_binary_tree **root, int value);
+void Free_Tree(t_binary_tree *root);
+void Print_tree_Pre_ordered(t_binary_tree *root);
+void Print_tree_In_ordered(t_binary_tree *root);
+void Print_tree_Post_ordered(t_binary_tree *root);
 #endif
