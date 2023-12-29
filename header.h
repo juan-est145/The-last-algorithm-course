@@ -39,3 +39,4 @@ t_arrayList* CreateArrayList(int initialCapacity);
 void Resize(t_arrayList *list);
 void Append(t_arrayList* list, int value);
 void FreeArrayList(t_arrayList* list);
+void QuickSort(int array[], unsigned int low, unsigned int high);
