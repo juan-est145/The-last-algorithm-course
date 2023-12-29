@@ -3,6 +3,7 @@ int main(void)
 {
    t_binary_tree *root;
 
+
    root = Add_Tree_Node(7);
    Insert_Left_Node(&root, 23);
    Insert_Right_Node(&root, 3);

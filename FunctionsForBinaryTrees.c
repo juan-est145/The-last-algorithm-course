@@ -17,11 +17,10 @@ t_binary_tree* Add_Tree_Node(int value)
 
 t_binary_tree *Insert_Right_Node(t_binary_tree **root, int value)
 {
-    t_binary_tree *new_node;
     if (*root == NULL)
     {
-        new_node = Add_Tree_Node(value);
-        return (new_node); 
+        *root = Add_Tree_Node(value);
+        return (*root); 
     }
     (*root)->right = Add_Tree_Node(value);
     return ((*root)->right);
@@ -29,11 +28,10 @@ t_binary_tree *Insert_Right_Node(t_binary_tree **root, int value)
 
 t_binary_tree *Insert_Left_Node(t_binary_tree **root, int value)
 {
-    t_binary_tree *new_node;
     if (*root == NULL)
     {
-        new_node = Add_Tree_Node(value);
-        return (new_node); 
+        *root = Add_Tree_Node(value);
+        return (*root); 
     }
     (*root)->left = Add_Tree_Node(value);
     return ((*root)->left);
