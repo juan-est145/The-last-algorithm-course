@@ -1,6 +1,5 @@
 #ifndef HEADER_H
 #define HEADER_H
-#endif
 
 #include <unistd.h>
 #include <string.h>
@@ -22,6 +21,13 @@ typedef struct s_structList{
     size_t capacity;
 } t_arrayList;
 
+typedef struct s_struct_tree
+{
+    int data;
+    struct s_struct_tree *left;
+    struct s_struct_tree *right;
+}t_binary_tree;
+
 int ReturnIndexBinary(int array[],int arrayLength, int value);
 int TwoCrystalBalls(bool array[], int length);
 void	BubbleSorting(int *tab, int size);
@@ -40,3 +46,4 @@ void Resize(t_arrayList *list);
 void Append(t_arrayList* list, int value);
 void FreeArrayList(t_arrayList* list);
 void QuickSort(int array[], int low, int high);
+#endif
