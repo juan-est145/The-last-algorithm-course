@@ -1,37 +1,40 @@
 #include "header.h"
 
-static unsigned int Partition(int array[], unsigned int low, unsigned int high);
-static void Swap(int *a, int *b);
+static int Partition(int array[], int low, int high);
+static void Swap(int *a, int *b); 
 
-void QuickSort(int array[], unsigned int low, unsigned int high)
+void QuickSort(int array[], int low, int high) 
 {
     if (low < high)
     {
-        unsigned int pi = Partition(array, low, high);
-        QuickSort(array, low, pi - 1);
-        QuickSort(array, pi + 1, high);
+        int pivot = Partition(array, low, high);
+        QuickSort(array, low, pivot - 1);
+        QuickSort(array, pivot + 1, high);
     }
 }
 
-static unsigned int Partition(int array[], unsigned int low, unsigned int high)
+static int Partition(int array[], int low, int high) 
 {
+    int swap = low - 1;
     int pivot = array[high];
 
-    for (unsigned int i = 0; i < high; i++)
+    for (unsigned int j = low; j < (unsigned int)high; j++)
     {
-        if (array[i] < pivot)
+        if (array[j] <= pivot)
         {
-            Swap(&array[low], &array[i]);
-            low++;
+            swap++;
+            Swap(&array[swap], &array[j]);
         }
     }
-    Swap(&array[low + 1], &array[high]);
-    return (low + 1);
+    Swap(&array[swap + 1], &array[high]);
+    return (swap + 1);
 }
+
+
 
 static void Swap(int *a, int *b) 
 {
-  int temporal = *a;
+  int t = *a;
   *a = *b;
-  *b = temporal;
+  *b = t;
 }
