@@ -80,3 +80,18 @@ void Print_tree_Post_ordered(t_binary_tree *root)
     Print_tree_Post_ordered(root->right);
     printf("%d\n",root->data);
 }
+
+t_binary_tree *Insert_recursive(t_binary_tree **root, int value)
+{
+
+  if (*root == NULL)
+    return (Add_Tree_Node (value));
+
+  if ((*root)->data <= value)
+    (*root)->right = Insert_recursive(&(*root)->right, value);
+
+  else if ((*root)->data > value)
+    (*root)->left = Insert_recursive(&(*root)->left, value);
+
+  return (*root);
+}

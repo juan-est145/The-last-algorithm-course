@@ -53,4 +53,5 @@ void Free_Tree(t_binary_tree *root);
 void Print_tree_Pre_ordered(t_binary_tree *root);
 void Print_tree_In_ordered(t_binary_tree *root);
 void Print_tree_Post_ordered(t_binary_tree *root);
+t_binary_tree *Insert_recursive(t_binary_tree **root, int value);
 #endif

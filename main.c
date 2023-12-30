@@ -5,14 +5,15 @@ int main(void)
 
 
    root = Add_Tree_Node(7);
-   Insert_Left_Node(&root, 23);
-   Insert_Right_Node(&root, 3);
-   
-   Insert_Left_Node(&root->left, 5);
-   Insert_Right_Node(&root->left, 4);
 
-   Insert_Left_Node(&root->right, 18);
-   Insert_Right_Node(&root->right, 21);
+   Insert_recursive(&root, 23);
+   Insert_recursive(&root, 3);
+
+   Insert_recursive(&root, 5);
+   Insert_recursive(&root, 4);
+
+   Insert_recursive(&root, 18);
+   Insert_recursive(&root, 21);
 
    printf("Here comes the values pre-ordered\n");
    Print_tree_Pre_ordered(root);
