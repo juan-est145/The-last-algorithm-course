@@ -1,6 +1,6 @@
 export default function bfs(head: BinaryNode<number>, needle: number): boolean
 {
-    const q: (Binarynode<number> | null)[] = [head];
+    const q: (BinaryNode<number> | null)[] = [head];
 
     while (q.length)
     {
