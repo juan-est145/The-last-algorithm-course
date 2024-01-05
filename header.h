@@ -1,5 +1,8 @@
 #ifndef HEADER_H
 #define HEADER_H
+#ifndef R_B_Size
+#define R_B_Size 10
+#endif
 
 #include <unistd.h>
 #include <string.h>
@@ -54,4 +57,7 @@ void Print_tree_Pre_ordered(t_binary_tree *root);
 void Print_tree_In_ordered(t_binary_tree *root);
 void Print_tree_Post_ordered(t_binary_tree *root);
 t_binary_tree *Insert_recursive(t_binary_tree **root, int value);
+void EnqueueRing(int value);
+void DequeueRing();
+int ReturnHead();
 #endif
