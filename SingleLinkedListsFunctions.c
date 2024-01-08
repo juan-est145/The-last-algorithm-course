@@ -75,6 +75,14 @@ void DeleteLinkedList(t_linkedList **linkedList)
    }
 }
 
+void DeleteNode(t_linkedList **linkedList)
+{
+   if (*linkedList == NULL) return ; 
+   t_linkedList *temp = *linkedList;
+   *linkedList = (*linkedList)->next;
+   free(temp);
+}
+
 void PrintLinkedList(t_linkedList *node)
 {
    while (node != NULL)

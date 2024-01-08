@@ -38,6 +38,7 @@ void PrintLinkedList(t_linkedList *node);
 t_linkedList* CreateLinkedList();
 void AddLastNode(t_linkedList **linkedList, int value);
 void DeleteLinkedList(t_linkedList **linkedList);
+void DeleteNode(t_linkedList **linkedList);
 void AddFirstNode(t_linkedList **linkedList, int value);
 void InsertAfterNode(t_linkedList **linkedList, int value);
 void Enqueue(int value, t_linkedList **head, t_linkedList **tail);
@@ -60,4 +61,5 @@ t_binary_tree *Insert_recursive(t_binary_tree **root, int value);
 void EnqueueRing(int value);
 void DequeueRing();
 int ReturnHead();
+void BreadthSearch(t_binary_tree **root);
 #endif

@@ -95,3 +95,8 @@ t_binary_tree *Insert_recursive(t_binary_tree **root, int value)
 
   return (*root);
 }
+
+void BreadthSearch(t_binary_tree **root)
+{
+    if (root == NULL) return;
+}
