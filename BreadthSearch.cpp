@@ -22,5 +22,4 @@ void LevelOrder(t_binary_tree **root)
         if(current->right != NULL) childNodes.push(current->right);
         childNodes.pop();
     }
-    
 }
