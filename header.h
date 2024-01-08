@@ -61,5 +61,5 @@ t_binary_tree *Insert_recursive(t_binary_tree **root, int value);
 void EnqueueRing(int value);
 void DequeueRing();
 int ReturnHead();
-void BreadthSearch(t_binary_tree **root);
+void LevelOrder(t_binary_tree **root);
 #endif
