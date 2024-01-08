@@ -1,1 +1,2 @@
 Part of the course in Front End Masters, "The Last Algorithms Course You'll Need" by the Primeagen. My repo mainly consists in recreating the functions of the course in C instead of TypeScript and also trying to make my own functions to solve certain excercises.
+This functions have not been tested or used in a real production enviroment and so I do not recommend that anyone uses them. These are only for pedagogical uses.
